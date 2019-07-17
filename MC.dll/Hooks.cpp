@@ -69,7 +69,6 @@ LSTATUS WINAPI DetourRegQueryValueExW(HKEY hKey, LPCWSTR lpValueName, LPDWORD lp
 	if ((strcmp(str.c_str(), "UninstallID") == 0) || (strcmp(str.c_str(), "CurrentBuildNumber") == 0))
 	{
 		oRegQueryValueExW(hKey, lpValueName, lpReserved, lpType, NULL, lpcbData);
-		//std::cout << "Blocked:" << (int)hKey << std::endl;
 		return ERROR_FILE_NOT_FOUND;
 	}
 
