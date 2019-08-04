@@ -24,13 +24,6 @@ void WINAPI ConsoleInit()
 	SetConsoleScreenBufferSize(hConsole, consoleSize);
 }
 
-void WriteToMemory(DWORD addressToWrite, char *valueToWrite, int numberOfBytes)
-{
-	unsigned long old_protection;
-	VirtualProtect((LPVOID)addressToWrite, numberOfBytes, PAGE_EXECUTE_READWRITE, &old_protection);
-	memcpy((LPVOID)addressToWrite, valueToWrite, numberOfBytes);
-	VirtualProtect((LPVOID)addressToWrite, numberOfBytes, old_protection, NULL);
-}
 
 MODULEINFO GetModuleInfo(char *szModule)
 {
