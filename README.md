@@ -1,5 +1,5 @@
 # Osu-Bypass
-Circumvents HWID bans on osu without tampering with any windows settings.
+Circumvents HWID bans on osu without tampering with any windows settings. Also inadvertently removes the need to validate your email.
 
 Requires special launcher. Not releasing the launcher, but instructions to create: 
 
